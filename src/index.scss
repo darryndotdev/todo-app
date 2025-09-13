@@ -1,4 +1,61 @@
-// Pico with violet primary color
+@use '@picocss/pico/scss/colors' as *;
 @use '@picocss/pico/scss/pico' with (
-    $theme-color: 'violet'
+    $theme-color: 'jade'
 );
+
+header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    background: linear-gradient(to right, $yellow-100, $jade-100);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: rem;
+    margin-top: 3rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+article label {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+article p {
+    flex-grow: 1;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+article label,
+article button {
+    flex-grow: 0;
+}
+
+article button {
+    border: none;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
