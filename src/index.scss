@@ -1,0 +1,4 @@
+// Pico with violet primary color
+@use '@picocss/pico/scss/pico' with (
+    $theme-color: 'violet'
+);
