@@ -7,10 +7,14 @@ import { useState } from 'react';
 function App() {
     const [todos, setTodos] = useState(data);
 
+    function handleAddTodo(todo) {
+        setTodos((todos) => [...todos, todo]);
+    }
+
     return (
         <div className='container'>
             <Hero />
-            <AddTodo />
+            <AddTodo onAddTodo={handleAddTodo} />
             <ul>
                 {todos.map((todo) => (
                     <TodoList todos={todo} key={todo.id} />

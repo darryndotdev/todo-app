@@ -1,8 +1,6 @@
 import Delete from './../Icons/Delete';
 
 const TodoList = ({ todos }) => {
-    console.log(todos);
-
     return (
         <li>
             <article>
