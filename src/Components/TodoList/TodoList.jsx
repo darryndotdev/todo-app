@@ -1,16 +1,23 @@
 import Delete from './../Icons/Delete';
 
-const TodoList = ({ todos, onDeleteTodo }) => {
+const TodoList = ({ todo, onDeleteTodo, onCompleteTodo }) => {
     return (
         <li>
             <article>
                 <label>
-                    <input type='checkbox' />
+                    <input
+                        type='checkbox'
+                        onChange={() => onCompleteTodo(todo.id)}
+                        value={todo.isComplete}
+                        checked={todo.isComplete ? 'checked' : ''}
+                    />
                 </label>
-                <p className='complete'>{todos.description}</p>
+                <p className={todo.isComplete ? 'complete' : ''}>
+                    {todo.description}
+                </p>
                 <button
                     className='outline contrast'
-                    onClick={() => onDeleteTodo(todos.id)}
+                    onClick={() => onDeleteTodo(todo.id)}
                 >
                     <Delete />
                 </button>

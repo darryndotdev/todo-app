@@ -15,6 +15,16 @@ function App() {
         setTodos((todos) => todos.filter((todo) => todo.id !== id));
     }
 
+    function handleCompleteTodo(id) {
+        setTodos((todos) =>
+            todos.map((todo) =>
+                todo.id === id
+                    ? { ...todo, isComplete: !todo.isComplete }
+                    : todo
+            )
+        );
+    }
+
     return (
         <div className='container'>
             <Hero />
@@ -22,9 +32,10 @@ function App() {
             <ul>
                 {todos.map((todo) => (
                     <TodoList
-                        todos={todo}
+                        todo={todo}
                         key={todo.id}
                         onDeleteTodo={handleDeleteTodo}
+                        onCompleteTodo={handleCompleteTodo}
                     />
                 ))}
             </ul>
