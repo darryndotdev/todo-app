@@ -11,13 +11,21 @@ function App() {
         setTodos((todos) => [...todos, todo]);
     }
 
+    function handleDeleteTodo(id) {
+        setTodos((todos) => todos.filter((todo) => todo.id !== id));
+    }
+
     return (
         <div className='container'>
             <Hero />
             <AddTodo onAddTodo={handleAddTodo} />
             <ul>
                 {todos.map((todo) => (
-                    <TodoList todos={todo} key={todo.id} />
+                    <TodoList
+                        todos={todo}
+                        key={todo.id}
+                        onDeleteTodo={handleDeleteTodo}
+                    />
                 ))}
             </ul>
         </div>
