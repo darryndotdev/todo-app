@@ -1,11 +1,23 @@
-import { data } from './data';
 import AddTodo from './Components/AddTodo/AddTodo';
 import Hero from './Components/Hero/Hero';
 import TodoList from './Components/TodoList/TodoList';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-    const [todos, setTodos] = useState(data);
+    const getTodos = () => {
+        const saved = localStorage.getItem('todos');
+        return saved ? JSON.parse(saved) : [];
+    };
+
+    const saveTodos = (todos) => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    };
+
+    const [todos, setTodos] = useState(getTodos);
+
+    useEffect(() => {
+        saveTodos(todos);
+    }, [todos]);
 
     function handleAddTodo(todo) {
         setTodos((todos) => [...todos, todo]);
