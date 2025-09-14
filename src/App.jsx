@@ -28,17 +28,19 @@ function App() {
     return (
         <div className='container'>
             <Hero />
-            <AddTodo onAddTodo={handleAddTodo} />
-            <ul>
-                {todos.map((todo) => (
-                    <TodoList
-                        todo={todo}
-                        key={todo.id}
-                        onDeleteTodo={handleDeleteTodo}
-                        onCompleteTodo={handleCompleteTodo}
-                    />
-                ))}
-            </ul>
+            <main>
+                <AddTodo onAddTodo={handleAddTodo} />
+                <ul>
+                    {todos.map((todo) => (
+                        <TodoList
+                            todo={todo}
+                            key={todo.id}
+                            onDeleteTodo={handleDeleteTodo}
+                            onCompleteTodo={handleCompleteTodo}
+                        />
+                    ))}
+                </ul>
+            </main>
         </div>
     );
 }
