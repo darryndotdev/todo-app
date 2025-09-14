@@ -1,12 +1,38 @@
-# React + Vite
+# ✅ Todo app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight yet functional todo application that helps you stay organised.
 
-Currently, two official plugins are available:
+## 🧰 Why I Built This Tool
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A to-do list is a great project to challenge myself because it involves all CRUD operations. Creating, reading, updating, and deleting todos allowing me to practice full data flow in a simple, real-world context.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   Create todos
+-   Mark todos as complete
+-   Delete todos
+-   Local storage persistence
+-   Dark/Light mode toggle
+
+## 🚀 Usage
+
+1. Enter a new task in the input field and add it to your list
+2. Mark tasks as complete when done
+3. Delete tasks you no longer need
+4. Toggle between dark and light mode
+5. Todos will be saved automatically in local storage
+
+[You can try it live here](https://darryndotdev.github.io/todo-app/)
+
+## 🛠 Tech stack
+
+This project is built using the following technologies:
+
+-   **Vite** – Fast and modern frontend tooling for rapid development
+-   **React** – Component-based UI library for building interactive interfaces
+-   **Pico CSS** – Minimal CSS framework for clean and responsive design
+-   **Sass** – CSS preprocessor for more maintainable and scalable styling
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to [get in touch](https://darryn.dev/contact).
