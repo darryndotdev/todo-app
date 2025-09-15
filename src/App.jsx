@@ -4,19 +4,19 @@ import TodoList from './Components/TodoList/TodoList';
 import { useState, useEffect } from 'react';
 
 function App() {
-    const getTodos = () => {
+    const getTodosLocalStorage = () => {
         const saved = localStorage.getItem('todos');
         return saved ? JSON.parse(saved) : [];
     };
 
-    const saveTodos = (todos) => {
+    const saveTodosLocalStorage = (todos) => {
         localStorage.setItem('todos', JSON.stringify(todos));
     };
 
-    const [todos, setTodos] = useState(getTodos);
+    const [todos, setTodos] = useState(getTodosLocalStorage);
 
     useEffect(() => {
-        saveTodos(todos);
+        saveTodosLocalStorage(todos);
     }, [todos]);
 
     function handleAddTodo(todo) {
